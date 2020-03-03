@@ -55,6 +55,10 @@ else()
 endif()
 cmake_minimum_required(VERSION 2.6.4)
 
+if (NOT (CMAKE_VERSION VERSION_LESS 3.14))
+  cmake_policy(VERSION 3.14)
+endif()
+
 if (POLICY CMP0063) # Visibility
   cmake_policy(SET CMP0063 NEW)
 endif (POLICY CMP0063)
